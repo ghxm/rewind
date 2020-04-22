@@ -1,2 +1,7 @@
 # Project exclude paths
 /venv/
+/.idea/
+test_*
+__pycache__/
+rewind.sqlite3
+test.py
