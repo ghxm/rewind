@@ -1,6 +1,6 @@
 [DB]
 # path to the SQLITE database file
-db = rewind.sqlite3
+db = rewind.db
 
 [STREAMRIPPER]
 # path to streamripper
