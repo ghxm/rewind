@@ -24,7 +24,7 @@ class Recording:
         while abs(datetime.datetime.now(datetime.timezone.utc) - self.time_start).seconds < 30: # seconds before show
             time.sleep(1)
         # start ripping
-        return subprocess.Popen(f'{config.get("STREAMRIPPER", "path")} {self.stream_url} -d {config.get("STREAMRIPPER", "outpath")} -a %d_%S {"-A" if not self.split_tracks else ""} -l {self.show_length+30}', shell = True)
+        return subprocess.Popen(f'{config.get("STREAMRIPPER", "path")} {self.stream_url} -d {config.get("STREAMRIPPER", "outdir")} -a %d_%S {"-A" if not self.split_tracks else ""} -l {self.show_length+30}', shell = True)
 
 
 
