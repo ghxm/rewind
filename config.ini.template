@@ -5,3 +5,4 @@ db = rewind.sqlite3
 [STREAMRIPPER]
 # path to streamripper
 path = /usr/local/bin/streamripper
+outpath = /
