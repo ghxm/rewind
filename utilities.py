@@ -1,9 +1,13 @@
 import configparser
 import apsw
+import pathlib
+
+rewind_dir = pathlib.Path(__file__).parent.absolute()
 
 def get_config():
+    global rewind_dir
     config = configparser.ConfigParser()
-    config.read('config.ini')
+    config.read(pathlib.PurePath(rewind_dir, 'config.ini'))
     return config
 
 def connect_db():
