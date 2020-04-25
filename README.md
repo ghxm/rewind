@@ -22,4 +22,4 @@ CREATE TABLE "scheduled_recordings" ("id" integer,"station_name" text,"show_name
 
 # Usage
 
-- In order to schedule a recording, add a new row to ```scheduled_recordings``` with ```processed```set to ```0``` and timezone-aware stard and end times
+- In order to schedule a recording, add a new row to ```scheduled_recordings``` with ```processed```set to ```0``` and timezone-aware start and end times
