@@ -19,3 +19,7 @@ CREATE TABLE "scheduled_recordings" ("id" integer,"station_name" text,"show_name
 ````
 * * * * * /home/<user>/rewind/venv/python /home/user/rewind/scheduler.py
 ````
+
+# Usage
+
+- In order to schedule a recording, add a new row to ```scheduled_recordings``` with ```processed```set to ```0``` and timezone-aware stard and end times
