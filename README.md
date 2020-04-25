@@ -14,10 +14,10 @@ CREATE TABLE "scheduled_recordings" ("id" integer,"station_name" text,"show_name
 - clone this repository
     - rename ```config.ini.template``` to ```config.ini```
     - adjust configurations in  ```config.ini```
-- set up cronjobs for `````scheduler.py````` to run periodically (e.g. every 5 minutes):
+- set up cronjobs for `````scheduler.py````` to run periodically (e.g. every 6 minutes, repeat time should ideall be larger than ```10/2``` as 10 minutes is the default time until the start of a scheduled recording that triggers an actual recording):
 
 ````
-* * * * * /home/<user>/rewind/venv/python /home/user/rewind/scheduler.py
+6 * * * * /home/<user>/rewind/venv/python /home/user/rewind/scheduler.py
 ````
 
 # Usage
