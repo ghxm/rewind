@@ -19,7 +19,7 @@ recordings=[]
 for rec in scheduled_recordings:
     if rec['time_stop'] < now: # if show has already ended
         continue
-    if rec['time_start'] < now or abs(rec['time_start'] - now).seconds < 100:
+    if rec['time_start'] < now or abs(rec['time_start'] - now).minutes < 10: # if show starts within the next 10 minutes or has already started
         id = rec['id']
         recordings.append(Recording(stream_url=rec['stream_url'], station_name=rec['station_name'], show_name=rec['show_name'], time_start=rec['time_start'], time_stop=rec['time_stop']).record())
         # Update entry with processed = True

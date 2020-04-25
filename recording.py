@@ -22,18 +22,13 @@ class Recording:
             self.time_stop = self.time_start + datetime.timedelta(seconds = show_length)
         else:
             self.show_length = abs(self.time_start-self.time_stop).total_seconds()
-
         self.split_tracks = split_tracks
-
 
     def record(self):
         # wait for show to start
         if datetime.datetime.now(pytz.utc) < self.time_start: # if recording start is in the future
             while abs(datetime.datetime.now(pytz.utc) - self.time_start).seconds > 30: # wait until 30 seconds before show
                 time.sleep(1)
-        # @TODO time and timezones
-        # @TODO recording does not work
-        # @TODO: start by testing streamripper directly on server with options set below
         # start ripping
         print("starting recording")
         return subprocess.Popen(f'{config.get("STREAMRIPPER", "path")} '
